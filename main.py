@@ -1,7 +1,11 @@
-immutable_var = (1, 2, 'go', 'lvt')
-print("Immutable tuple:", immutable_var)
-immutable_var[0] = 8
-mutable_list = (1, 4, 7, 8)
-print(mutable_list)
-mutable_list[2] = 7
-print(mutable_list)
+my_dict = {'Mom': 1984,'Alsu':2011,'Petya':2009}
+print(my_dict['Petya'])
+my_dict['Anton'] = 1995
+my_dict['Vasya'] = 1998
+print(my_dict)
+my_set = {1,2,4,5,6,7,3,2,89, 'Vladimir'}
+print(my_set)
+print(my_set.add(0))
+print(my_set)
+print(my_set.discard(89))
+print(my_set)
