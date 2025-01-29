@@ -1,12 +1,17 @@
-my_dict = {'Mom': 1984,'Alsu':2011,'Petya':2009}
-print(my_dict['Petya'])
-my_dict['Anton'] = 1995
-my_dict['Vasya'] = 1998
-print(my_dict)
-my_set = {1,2,4,5,6,7,3,2,89, 'Vladimir'}
-print(my_set)
-print(my_set.add(0))
-print(my_set)
-print(my_set.discard(89))
-print(my_set)
-print(my_set.pop(9))
+grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
+students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
+
+
+def get_aver_grade(students: set, grades: list) -> dict:
+    grades_of_students = {}
+
+    students = sorted(students)
+
+    for i in range(len(students)):
+        grades_of_students[students[i]] = sum(grades[i]) / len(grades[i])
+
+    return grades_of_students
+
+
+res = get_aver_grade(students, grades)
+print(res)
